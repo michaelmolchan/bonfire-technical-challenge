@@ -1,0 +1,114 @@
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* background-color: #232d30; */
+  height: 170px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  /* box shadow */
+  /* -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5); */
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  float: left;
+  /* padding-top: 80px; */
+}
+
+.nav-logo a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 170px;
+}
+
+.nav-logo .light {
+  font-weight: normal;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 40px;
+  vertical-align: middle;
+  line-height: 170px;
+  letter-spacing: 2px;
+
+  /* position: relative; */
+}
+
+nav a {
+  color: #fff;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: #fdecca;
+}
+
+.intro {
+  width: 100%;
+  max-width: 1920px;
+  background-image: url("../images/mountain-background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 427px;
+  padding-top: 120px;
+}
+
+.intro .row {
+  padding: 20px 20px 25px;
+  margin: 0 auto;
+  width: 42%;
+  text-align: center;
+}
+
+.intro h1 {
+  color: #fff;
+  font-size: 54px;
+  line-height: 40px;
+}
+
+.intro h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 32px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
