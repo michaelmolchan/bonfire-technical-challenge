@@ -22,4 +22,11 @@ $(() => {
       toggleIcon.className = 'menuIcon'
     }
   })
+
+  // closes mobile menu when a link is clicked.
+  $('#menu').click(() => {
+    toggleIcon.className = 'menuIcon'
+    nav.style.transform = 'translateX(-100%)'
+    nav.style.transition = 'transform 0.2s ease-out'
+  })
 })
