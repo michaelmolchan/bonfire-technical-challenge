@@ -1,26 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #fff;
+  background-color: #f2f4f8;
   margin: 0;
   padding: 0;
 }
 
 header {
-  /* background-color: #232d30; */
   height: 170px;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
-
-  /* box shadow */
-  /* -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5); */
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav-container {
@@ -30,7 +29,15 @@ header::after {
 
 .nav-logo {
   float: left;
-  /* padding-top: 80px; */
+}
+
+nav a {
+  color: #fff;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
+  transition: 0.4s;
 }
 
 .nav-logo a {
@@ -42,6 +49,7 @@ header::after {
   font-weight: bold;
   vertical-align: middle;
   line-height: 170px;
+  transition: 0.4s;
 }
 
 .nav-logo .light {
@@ -64,16 +72,6 @@ nav li {
   vertical-align: middle;
   line-height: 170px;
   letter-spacing: 2px;
-
-  /* position: relative; */
-}
-
-nav a {
-  color: #fff;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: normal;
   transition: 0.4s;
 }
 
@@ -81,27 +79,9 @@ nav a:hover {
   color: #fdecca;
 }
 
-/* TEST */
-
-.bg {
-  background: #000;
-  width: 100%;
-  height: 100px;
-  opacity: 0;
+nav a:focus {
+  color: #fdecca;
 }
-
-.show {
-  opacity: 0.4;
-}
-
-.transition {
-  -webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-}
-
-/* TEST END */
 
 /* MOBILE NAV START */
 
@@ -133,8 +113,6 @@ nav a:hover {
   display: block;
   font-size: 3em;
   letter-spacing: 4px;
-
-  /* opacity: 0; */
   padding: 20px 0;
   text-align: center;
   text-decoration: none;
@@ -142,9 +120,6 @@ nav a:hover {
   color: white;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
-
-  /* -webkit-transition: 0.2s opacity 0.2s ease-out;
-  transition: 0.2s opacity 0.2s ease-out; */
 }
 
 .overlay-menu li a:hover,
@@ -154,13 +129,204 @@ nav a:hover {
   transition: color 0.3s ease;
 }
 
+/* MOBILE NAV END */
+
+.intro {
+  width: 100%;
+  max-width: 100%;
+  background-image: url("../images/mountain-background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 427px;
+  padding-top: 120px;
+}
+
+.intro .row {
+  padding: 20px 20px 25px;
+  margin: 0 auto;
+  width: 42%;
+  text-align: center;
+}
+
+.intro h1 {
+  color: #fff;
+  font-size: 54px;
+  line-height: 38px;
+}
+
+.intro h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 28px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.buttons {
+  width: 100%;
+  margin-top: -30px;
+  text-align: center;
+  font-size: 0;
+}
+
+.buttons button {
+  text-transform: uppercase;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  background-color: #696579;
+  border: none;
+  width: 175px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.section button {
+  display: none;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #696579;
+  border: none;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  margin-top: 80px;
+  cursor: pointer;
+}
+
+.buttons button:focus {
+  background-color: #fdecca;
+  color: #52485d;
+  font-weight: bold;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+  outline: 0;
+}
+
+.container {
+  margin: 55px 15px 15px 15px;
+  text-align: center;
+}
+
+.section {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 29%;
+  box-sizing: border-box;
+  padding: 75px 30px 20px;
+  border-radius: 3px;
+  border-bottom: 2px solid #e5ecee;
+  margin: 25px 20px 25px 20px;
+  min-height: 325px;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.section h1 {
+  text-transform: uppercase;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #aaaeb6;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.section p {
+  text-transform: uppercase;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color: #696579;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.section:hover {
+  border-top: 3px solid #d83a6a;
+  margin: 25px 20px 50px 20px;
+  padding: 30px 30px 20px;
+  -webkit-box-shadow: 0 30px 30px 0 rgba(61, 85, 92, 0.1);
+  -moz-box-shadow: 0 30px 30px 0 rgba(61, 85, 92, 0.1);
+  box-shadow: 0 30px 30px 0 rgba(61, 85, 92, 0.1);
+}
+
+.section:hover h1 {
+  color: #caa97d;
+}
+
+.section:hover p {
+  color: #1d314c;
+}
+
+@media (max-width: 1000px) {
+  .intro {
+    background-image: url("../images/mountain-background-mobile-2.jpg");
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    float: none;
+    width: auto;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .intro h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .intro .row {
+    padding: 20px 20px 25px;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    width: 80%;
+  }
+}
+
 @media (max-width: 760px) {
+  header {
+    background: #1b2434;
+    height: 93px;
+    -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+    position: fixed;
+  }
+
   nav ul {
     display: none;
   }
 
   .nav-logo a {
-    line-height: 90px;
+    line-height: 93px;
   }
 
   .menuIcon {
@@ -182,9 +348,6 @@ nav a:hover {
     top: 45%;
     height: 4px;
     width: 30px;
-
-    /* -webkit-transition: 0.4s;
-    transition: 0.4s; */
   }
 
   .icon-bars::before {
@@ -195,9 +358,6 @@ nav a:hover {
     top: -10px;
     height: 4px;
     width: 30px;
-
-    /* -webkit-transition: top 0.2s ease 0.3s;
-    transition: top 0.2s ease 0.3s; */
     -webkit-transition: 0.3s width 0.4s;
     transition: 0.3s width 0.4s;
   }
@@ -211,10 +371,6 @@ nav a:hover {
     bottom: -10px;
     height: 4px;
     width: 30px;
-
-    /* -webkit-transition: top 0.2s ease 0.3s;
-    transition: top 0.2s ease 0.3s; */
-
     -webkit-transition: 0.4s width 0.4s;
     transition: 0.4s width 0.4s;
   }
@@ -223,8 +379,8 @@ nav a:hover {
   .menuIcon.toggle .icon-bars {
     top: 20px;
     transform: translate3d(0, 5px, 0) rotate(135deg);
-    transition-delay: 0.1s;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-delay: 0.1s;
   }
 
   .menuIcon.toggle .icon-bars::before {
@@ -236,47 +392,26 @@ nav a:hover {
   .menuIcon.toggle .icon-bars::after {
     top: 10px;
     transform: translate3d(0, -10px, 0) rotate(-270deg);
-    transition-delay: 0.1s;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-delay: 0.1s;
   }
 }
 
-/* MOBILE NAV END */
-
-.intro {
-  width: 100%;
-  max-width: 100%;
-  background-image: url("../images/mountain-background.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  height: 427px;
-  padding-top: 120px;
+@media (max-width: 768px) {
+  .section {
+    float: none;
+    width: auto;
+  }
 }
 
-.intro .row {
-  padding: 20px 20px 25px;
-  margin: 0 auto;
-  width: 42%;
-  text-align: center;
-}
+@media (max-width: 560px) {
+  .buttons button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+  }
 
-.intro h1 {
-  color: #fff;
-  font-size: 54px;
-  line-height: 40px;
-}
-
-.intro h4 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: lighter;
-  line-height: 32px;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-}
-
-.grid {
-  width: 100%;
-  height: 400px;
-  background-color: #f2f4f8;
+  .intro {
+    background-image: url("../images/mountain-background-mobile-2.jpg");
+  }
 }
