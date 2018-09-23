@@ -2,6 +2,9 @@
 <html>
     <head>
       <title>Bonfire Challenge</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Bonfire Studios Technical Challenge">
+      <meta name="keywords" content="bonfire,technical challenge,coding challenge,HTML,CSS jQuery, JavaScript">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
       <link href="assets/styles/styles.css"rel="stylesheet" type="text/css">
@@ -10,11 +13,9 @@
     </head>
     <body>
 
-      <header>
+      <header class="transition">
 
         <div class="nav-container">
-
-          <!-- <div class="bg transition"></div> -->
 
           <div class="nav-logo">
             <a href="#">Logo<span style="color: #fdecca; font-weight: 400;">design</span></a>
@@ -31,7 +32,6 @@
 
           <div class="menuIcon">
             <span class="icon icon-bars"></span>
-            <!-- <span class="icon icon-bars overlay"></span> -->
           </div>
 
           <div class="overlay-menu">
@@ -48,13 +48,58 @@
       </header>
 
       <div class="intro">
+
         <div class="row">
           <h1>Why Hello There</h1>
           <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et</h4>
         </div>
+
       </div>
 
-      <div class="grid">
+      <div class="buttons">
+          <button id="show-all">show all</button>
+          <button id="show-even">show even</button>
+          <button id="show-odd">show odd</button>
+      </div>
+
+      <div class="container">
+
+        <div class="section odd box-one">
+          <h1>box number 1</h1>
+          <p>useless subtext</p>
+          <a href="#"><button id="btn-1">view the case study</button></a>
+        </div>
+
+        <div class="section even box-two">
+          <h1>box number 2</h1>
+          <p>useless subtext</p>
+          <a href="#"><button id="btn-2">view the case study</button></a>
+        </div>
+
+        <div class="section odd box-three">
+          <h1>box number 3</h1>
+          <p>useless subtext</p>
+          <a href="#"><button id="btn-3">view the case study</button></a>
+        </div>
+
+        <div class="section even box-four">
+          <h1>box number 4</h1>
+          <p>useless subtext</p>
+          <a href="#"><button id="btn-4">view the case study</button></a>
+        </div>
+
+        <div class="section odd box-five">
+          <h1>box number 5</h1>
+          <p>useless subtext</p>
+          <a href="#"><button id="btn-5">view the case study</button></a>
+        </div>
+
+        <div class="section even box-six">
+          <h1>box number 6</h1>
+          <p>useless subtext</p>
+          <a href="#"><button id="btn-6">view the case study</button></a>
+        </div>
+
       </div>
 
     </body>
