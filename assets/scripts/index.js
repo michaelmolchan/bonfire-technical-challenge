@@ -30,7 +30,16 @@ $(() => {
     nav.style.transition = 'transform 0.2s ease-out'
   })
 
-  $('#show-all').focus()
+  // Add active class to the current button (highlight it)
+  const header = document.getElementById('buttons')
+  const btns = header.getElementsByClassName('btn')
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      const current = document.getElementsByClassName('active')
+      current[0].className = current[0].className.replace(' active', '')
+      this.className += ' active'
+    })
+  }
 
   $('#show-all').click(() => {
     $('.even').show()

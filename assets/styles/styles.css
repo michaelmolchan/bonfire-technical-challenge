@@ -162,14 +162,15 @@ nav a:focus {
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.buttons {
+#buttons {
   width: 100%;
   margin-top: -30px;
   text-align: center;
   font-size: 0;
 }
 
-.buttons button {
+/* Style the buttons */
+.btn {
   text-transform: uppercase;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 14px;
@@ -185,7 +186,17 @@ nav a:focus {
   transition: 0.4s;
 }
 
-.section button {
+/* Style the active class, and buttons on click */
+.active {
+  background-color: #fdecca;
+  color: #52485d;
+  font-weight: bold;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+  outline: 0;
+}
+
+/* .section button {
   display: none;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
@@ -200,16 +211,7 @@ nav a:focus {
   padding: 20px;
   margin-top: 80px;
   cursor: pointer;
-}
-
-.buttons button:focus {
-  background-color: #fdecca;
-  color: #52485d;
-  font-weight: bold;
-  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.05);
-  transform: scale(1.1);
-  outline: 0;
-}
+} */
 
 .container {
   margin: 55px 15px 15px 15px;
@@ -405,7 +407,7 @@ nav a:focus {
 }
 
 @media (max-width: 560px) {
-  .buttons button {
+  .btn {
     display: block;
     margin: 10px auto;
     width: 100%;
