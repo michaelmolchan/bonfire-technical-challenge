@@ -221,7 +221,7 @@ nav a:focus {
 
 .section {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   width: 29%;
   box-sizing: border-box;
   padding: 75px 30px 20px;
