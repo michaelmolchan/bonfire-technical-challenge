@@ -196,7 +196,8 @@ nav a:focus {
   outline: 0;
 }
 
-/* .section button {
+/* box buttons */
+.section button {
   display: none;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
@@ -211,7 +212,7 @@ nav a:focus {
   padding: 20px;
   margin-top: 80px;
   cursor: pointer;
-} */
+}
 
 .container {
   margin: 55px 15px 15px 15px;
