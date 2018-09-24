@@ -279,18 +279,35 @@ nav a:focus {
   color: #1d314c;
 }
 
-@media (max-width: 1000px) {
-  .intro {
-    background-image: url("../images/mountain-background-mobile-2.jpg");
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
   .section {
     float: none;
     width: auto;
   }
 
+  .intro {
+    background-image: url("../images/mountain-background-mobile.jpg");
+  }
+
+  .intro h1 {
+    font-size: 40px;
+    line-height: 38px;
+  }
+
+  .intro h4 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .intro .row {
+    padding: 20px 20px 25px;
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
   .intro h1 {
     font-size: 34px;
     line-height: 38px;
@@ -306,12 +323,6 @@ nav a:focus {
     margin: 0 auto;
     width: 80%;
     text-align: center;
-  }
-}
-
-@media (max-width: 720px) {
-  .section {
-    width: 80%;
   }
 }
 
@@ -407,11 +418,17 @@ nav a:focus {
   }
 }
 
+@media (max-width: 720px) {
+  .section {
+    width: 90%;
+  }
+}
+
 @media (max-width: 560px) {
   .btn {
     display: block;
     margin: 10px auto;
-    width: 100%;
+    width: 80%;
   }
 
   .intro {
