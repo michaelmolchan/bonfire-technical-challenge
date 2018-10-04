@@ -13,16 +13,6 @@ $(() => {
     }
   })
 
-  const toggleIcon = document.querySelector('.menuIcon')
-
-  toggleIcon.addEventListener('click', () => {
-    if (toggleIcon.className !== 'menuIcon toggle') {
-      toggleIcon.className += ' toggle'
-    } else {
-      toggleIcon.className = 'menuIcon'
-    }
-  })
-
   // closes mobile menu when a link is clicked
   $('#menu').click(() => {
     toggleIcon.className = 'menuIcon'
@@ -56,52 +46,44 @@ $(() => {
     $('.even').show()
   })
 
-  // Hide/show box buttons
-  $('.box-one').on('mouseenter', function () {
-    $('#btn-1').delay(50).fadeIn(100)
-  })
+  // GreenSock Box Hover Effect
+  $('.section').hover(over, out);
 
-  $('.box-one').on('mouseleave', function () {
-    $('#btn-1').delay(50).fadeOut(100)
-  })
+  function over(){
+    TweenMax.to(this, .3, {y:-15, boxShadow: '0px 30px 30px 0px rgba(61, 85, 92, 0.1)', borderTop: '3px solid rgba(199, 72, 107, 1)', ease: Power0.easeNone})
+    TweenMax.to($(this).find("h1"), .3, {y:-40, color: '#caa97d', ease: Power0.easeNone})
+    TweenMax.to($(this).find("p"), .3, {y:-40, color: '#1d314c', ease: Power0.easeNone})
+    TweenMax.to($(this).find("button"), .3, {y:-20, ease: Power0.easeNone, opacity: 1});
+  }
 
-  $('.box-two').on('mouseenter', function () {
-    $('#btn-2').delay(50).fadeIn(100)
-  })
+  function out(){
+    TweenMax.to(this, .3, {y: 0, boxShadow: '1px 2px 5px 1px rgba(0, 0, 0, 0.05)', borderTop: '3px solid rgba(199, 72, 107, 0)', ease: Power0.easeNone})
+    TweenMax.to($(this).find("h1"), .3, {y:0, color: '#aaaeb6', ease: Power0.easeNone})
+    TweenMax.to($(this).find("p"), .3, {y:0, color: '#696579', ease: Power0.easeNone})
+    TweenMax.to($(this).find("button"), .3, {y:0, ease: Power0.easeNone, opacity: 0});
+  }
 
-  $('.box-two').on('mouseleave', function () {
-    $('#btn-2').delay(50).fadeOut(100)
-  })
+  // Hamburger Menu Toggle Animation
+  var $iconBarTop = $('.menu-icon-top'),
+    $iconBarMiddle = $('.menu-icon-middle'),
+    $iconBarBottom = $('.menu-icon-bottom');
 
-  $('.box-three').on('mouseenter', function () {
-    $('#btn-3').delay(50).fadeIn(100)
-  })
+  var tlMenuToggle = new TimelineMax({paused:true});
 
-  $('.box-three').on('mouseleave', function () {
-    $('#btn-3').delay(50).fadeOut(100)
-  })
+  tlMenuToggle
+    .to($iconBarTop, .8, {y: 10, rotation:45, ease: Elastic.easeOut.config(1, 0.5)})
+    .to($iconBarMiddle, .1, {backgroundColor: 'rgb(250, 250, 250, 0)', ease: Power0.easeNone}, '-=.8')
+    .to($iconBarBottom, .8, {y: -10, rotation:-45, ease: Elastic.easeOut.config(1, 0.5)}, '-=.8');
 
-  $('.box-four').on('mouseenter', function () {
-    $('#btn-4').delay(50).fadeIn(100)
-  })
+  const toggleIcon = document.querySelector('.menuIcon')
 
-  $('.box-four').on('mouseleave', function () {
-    $('#btn-4').delay(50).fadeOut(100)
-  })
-
-  $('.box-five').on('mouseenter', function () {
-    $('#btn-5').delay(50).fadeIn(100)
-  })
-
-  $('.box-five').on('mouseleave', function () {
-    $('#btn-5').delay(50).fadeOut(100)
-  })
-
-  $('.box-six').on('mouseenter', function () {
-    $('#btn-6').delay(50).fadeIn(100)
-  })
-
-  $('.box-six').on('mouseleave', function () {
-    $('#btn-6').delay(50).fadeOut(100)
+  toggleIcon.addEventListener('click', () => {
+    if (toggleIcon.className !== 'menuIcon toggle') {
+      toggleIcon.className += ' toggle'
+      tlMenuToggle.play().timeScale(1);
+    } else {
+      toggleIcon.className = 'menuIcon'
+      tlMenuToggle.reverse().timeScale(2);
+    }
   })
 })
